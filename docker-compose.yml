@@ -21,7 +21,7 @@ services:
       - "15672:15672"
     environment: 
       - RABBITMQ_DEFAULT_USER=guest
-      - RABBITMQ_DEFAULT_pass=guest
+      - RABBITMQ_DEFAULT_PASS=guest
   vproapp:
     build:
       context: ./Docker-files/app
@@ -30,7 +30,7 @@ services:
     ports:
       - "8080:8080"
     volumes:
-      - vproappdata:/usr/local/tomact/webapps/
+      - vproappdata:/usr/local/tomcat/webapps/
 
   vproweb:
     build:
